@@ -1,0 +1,51 @@
+{
+	"storage": {
+		"type": "pstore",
+		"path": "data/omnicron.pstore"
+	},
+	"log": {
+		"path": "logs/omnicron.log",
+		"rollover": "daily",
+		"verbose": true
+	},
+	"google": {
+		"api_key": "PUT_KEY_HERE"
+	},
+	"discord": {
+		"app_id": "PUT_ID_HERE",
+		"app_key": "PUT_KEY_HERE",
+		"bot_key": "PUT_KEY_HERE",
+		"permissions_integer": "395137203206",
+		"invite_link": "https://discord.com/api/oauth2/authorize?client_id=${app_id}&permissions=${permissions_integer}&scope=bot%20applications.commands",
+		"bad_url_image": "https://media2.giphy.com/media/njYrp176NQsHS/giphy.gif?cid=ecf05e47hxov7z1m19jiufrbtzdowks5jifktudjhcrmzgcd&rid=giphy.gif&ct=g"
+	},
+	"reddit": {
+		"check_interval": 30,
+		"keyword_scan": {
+			"send_to_discord": {
+				"channel_id": CHANNEL_ID_HERE,
+				"server_id": SERVER_ID_HERE
+			},
+			"scrape": {
+				"subs": [
+					"linux"
+				],
+				"keywords": [
+					"debian",
+					"fedora",
+					"arch"
+				]
+			}
+		}
+	},
+	"features": [
+		"google-api",
+		"discord",
+		"discord-message-read",
+		"discord-url-protection",
+		"reddit",
+		"reddit-sub-scrape",
+		"reddit-keyword-scan",
+		"reddit-keyword-to-discord"
+	]
+}

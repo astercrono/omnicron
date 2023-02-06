@@ -1,6 +1,8 @@
-/config
 /data
 /logs
 /.vscode
 /.bundle/config
 /.idea
+
+/config/*
+!/config/sample.json
