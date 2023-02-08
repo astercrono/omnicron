@@ -13,10 +13,10 @@ module Omnicron
                 def handle_event(post)
                     Log.instance.debug("Checking post for keywords: #{post.title[0..50]}")
 
-                    match_title = @keywords.select { |word| post.title.downcase.include? word.downcase }
-                    match_flair = @keywords.select { |word| post.link_flair_text.downcase.include? word.downcase }
+                    match_title = @keywords.select { |word| post.title&.downcase&.include? word&.downcase }
+                    match_flair = @keywords.select { |word| post.link_flair_text&.downcase&.include? word&.downcase }
 
-                    matches = match_title || match_flair
+                    matches = match_title + match_flair
 
                     if matches.empty?
                         Log.instance.debug("No Matches Found")
