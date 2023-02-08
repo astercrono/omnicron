@@ -6,9 +6,9 @@ For example, this framework can be used scrape posts off Reddit and share them i
 
 ## Features
 
-Omnicron functionality is opt-in at runtime and is broken up into combinations of **features**. Each feature itself is tied to one more backends.
+Omnicron functionality is opt-in at runtime and is broken up into combinations of **features**. Each feature itself is tied to one or more backends.
 
-As such, to enable functionality, a list of features must be provided (more on how to that later).
+As such, to enable functionality, a list of features must be provided (more on that later).
 
 Here is the current list of supported features and their required backends:
 
@@ -22,7 +22,7 @@ Here is the current list of supported features and their required backends:
 
 Combining features is how to enable overall functionality.
 
-### Currently Functionality
+### Current Functionality
 
  | Functionality                    | Features 
  |----------------------------------|----------
@@ -31,7 +31,7 @@ Combining features is how to enable overall functionality.
 
 ## Prerequisites
 
-The setup process can vary based on what features are being enabled. Essentially, you will nee API credentials for some backends.
+The setup process can vary based on what features are being enabled. Essentially, you will need API credentials for some backends.
 
 ### Discord
 
@@ -48,7 +48,7 @@ Review Discord's Getting Started Guide for help obtaining those: https://discord
 
 ### Reddit
 
-No special credentials are required from Reddit. The current Reddit backend implementation is read-only. Just enable the features.
+No special credentials are required from Reddit. The current Reddit backend is read-only. Just enable the features.
 
 ### Google
 
@@ -62,7 +62,7 @@ For typical Discords, a free tier is probably just fine. Review Google's Quota G
 
 ### Project Setup
 
-Clone this repositoryu: `git clone https://github.com/cronkib/omnicron.git`
+Clone this repository: `git clone https://github.com/cronkib/omnicron.git`
 
 Enter the project: `cd omnicron`
 
@@ -108,4 +108,6 @@ Ruby 3.2 is recommended and ensure that you have Bundler installed.
 
 **Run**
 
-`bundle exec run.rb -c <path-to-config.json>`
+`bundle exec run.rb -c config/myconfig.json`
+
+**Note**: When running from source, the config file path is specified in full, relative from the omnicron directory.
