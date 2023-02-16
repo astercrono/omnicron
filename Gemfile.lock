@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/shardlab/discordrb
+  revision: ad5dd1641f3653ca4e76d44f901adb42018e354e
+  branch: main
+  specs:
+    discordrb (3.4.2)
+      discordrb-webhooks (~> 3.4.2)
+      ffi (>= 1.9.24)
+      opus-ruby
+      rest-client (>= 2.0.0)
+      websocket-client-simple (>= 0.3.0)
+    discordrb-webhooks (3.4.2)
+      rest-client (>= 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -9,14 +23,6 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
-    discordrb (3.4.0)
-      discordrb-webhooks (~> 3.3.0)
-      ffi (>= 1.9.24)
-      opus-ruby
-      rest-client (>= 2.0.0)
-      websocket-client-simple (>= 0.3.0)
-    discordrb-webhooks (3.3.0)
-      rest-client (>= 2.1.0.rc1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     e2mmap (0.1.0)
@@ -128,7 +134,8 @@ PLATFORMS
 DEPENDENCIES
   concurrent-ruby (~> 1.1, >= 1.1.10)
   debug
-  discordrb
+  discordrb!
+  discordrb-webhooks!
   fuubar
   optparse
   rake

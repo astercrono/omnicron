@@ -11,6 +11,10 @@ group :development do
 end
 
 gem "concurrent-ruby", "~> 1.1", ">= 1.1.10"
-gem "discordrb"
 gem "optparse"
 gem "reddit_get"
+
+git "https://github.com/shardlab/discordrb", branch: "main" do
+    gem "discordrb"
+    gem "discordrb-webhooks"
+end
